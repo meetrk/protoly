@@ -1,0 +1,36 @@
+[tool.poetry]
+name = "protoly"
+version = "0.1.0"
+description = "Your project description"
+authors = ["Your Name <your.email@example.com>"]
+packages = [{include = "core", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.13"
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.3.0"
+ruff = "^0.3.0"
+mypy = "^1.8.0"
+pre-commit = "^3.6.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 88
+target-version = ["py312"]
+
+[tool.ruff]
+select = ["E", "F", "I", "N", "W", "B", "COM", "C4", "DTZ", "T10", "PT", "UP"]
+ignore = []
+line-length = 88
+target-version = "py312"
+
+[tool.mypy]
+python_version = "3.13"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+check_untyped_defs = true
