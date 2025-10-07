@@ -7,6 +7,9 @@ packages = [{include = "core", from = "src"}]
 
 [tool.poetry.dependencies]
 python = "^3.13"
+jsonschema = "^4.25.1"
+pyyaml = "^6.0.3"
+httpx = "^0.28.1"
 
 [tool.poetry.group.dev.dependencies]
 black = "^24.3.0"
@@ -24,10 +27,12 @@ line-length = 88
 target-version = ["py312"]
 
 [tool.ruff]
-select = ["E", "F", "I", "N", "W", "B", "COM", "C4", "DTZ", "T10", "PT", "UP"]
-ignore = []
 line-length = 88
 target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "W", "B", "COM", "C4", "DTZ", "T10", "PT", "UP"]
+ignore = []
 
 [tool.mypy]
 python_version = "3.13"
