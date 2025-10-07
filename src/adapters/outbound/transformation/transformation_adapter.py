@@ -19,7 +19,6 @@ class TransformationEngine:
             concatenate,
             default_value,
             direct_mapping,
-            extract_field,
             format_date,
             lowercase,
             uppercase,
@@ -32,7 +31,6 @@ class TransformationEngine:
                 "concatenate": concatenate.transform,
                 "uppercase": uppercase.transform,
                 "lowercase": lowercase.transform,
-                "extract_field": extract_field.transform,
                 "default_value": default_value.transform,
             },
         )
