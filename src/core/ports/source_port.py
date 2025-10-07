@@ -1,7 +1,7 @@
 # src/core/ports/source_port.py
 from typing import Protocol
 
-from ..entities.transformation_job import ApiRequest, ApiResponse
+from src.core.entities.transformation_job import ApiRequest, ApiResponse
 
 
 class SourcePort(Protocol):

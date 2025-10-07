@@ -2,8 +2,8 @@
 from dataclasses import dataclass
 from typing import Any
 
-from core.entities.transformation_job import TransformationJob
-from core.ports.transformation_port import TransformationPort
+from src.core.entities.transformation_job import TransformationJob
+from src.core.ports.transformation_port import TransformationPort
 
 
 @dataclass
