@@ -23,7 +23,7 @@ class TransformationJob:
     customer_id: str = field(default="")
     config_name: str = field(default="")
     status: JobStatus = field(default=JobStatus.PENDING)
-    created_at: datetime = field(default_factory=datetime.utcnow)
+    created_at: datetime = field(default_factory=lambda: datetime.now(tz=UTC))
     completed_at: datetime | None = None
     error_message: str | None = None
 
