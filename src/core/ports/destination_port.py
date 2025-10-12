@@ -1,7 +1,7 @@
 # src/core/ports/destination_port.py
 from typing import Any, Protocol
 
-from src.core.entities.transformation_job import ApiRequest
+from core.entities.transformation_job import ApiRequest
 
 
 class DestinationPort(Protocol):

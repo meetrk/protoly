@@ -2,8 +2,8 @@
 from dataclasses import dataclass
 from typing import Any
 
-from src.core.entities.transformation_job import ApiRequest, TransformationJob
-from src.core.ports.destination_port import DestinationPort
+from core.entities.transformation_job import ApiRequest, TransformationJob
+from core.ports.destination_port import DestinationPort
 
 
 @dataclass

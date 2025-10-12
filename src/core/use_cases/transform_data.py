@@ -2,8 +2,8 @@
 from dataclasses import dataclass
 from typing import Any
 
-from src.core.entities.transformation_job import TransformationJob
-from src.core.ports.transformation_port import TransformationPort
+from core.entities.transformation_job import TransformationJob
+from core.ports.transformation_port import TransformationPort
 
 
 @dataclass
@@ -32,9 +32,11 @@ class TransformDataUseCase:
         job.mark_as_transforming()
 
         try:
-            transformed_data = await self.transformation_engine.transform(
-                source_data,
-                transformation_rules,
+            transformed_data: dict[str, Any] = (
+                await self.transformation_engine.transform(
+                    source_data,
+                    transformation_rules,
+                )
             )
             return transformed_data
         except Exception as e:
